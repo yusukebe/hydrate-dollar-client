@@ -12,6 +12,11 @@ app.get('/', (c) => {
   return c.render(
     <>
       <Counter $client initial={3} />
+      <hr />
+      <Badge $client name="parent">
+        <Badge name="child" />
+      </Badge>
+      <hr />
       <Badge $client name="Hono">
         {/* not working */}
         <Counter initial={5} />
